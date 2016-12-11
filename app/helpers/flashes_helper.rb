@@ -1,4 +1,4 @@
-module FlashsHelper
+module FlashesHelper
   FLASH_CALSSES = { alert: "danger", notice: "success", warnring: "warning"}.freeze
 
   def flash_class(key)
@@ -6,6 +6,6 @@ module FlashsHelper
   end
 
   def user_facing_flashes
-    flsh.to_help.slice "aler". "notice", "warnring"
+    flash.to_hash.slice  "alert", "notice", "warnring"
   end
 end
